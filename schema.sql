@@ -23,13 +23,13 @@ CREATE TABLE Movie (
     format VARCHAR(20)
 );
 
--- Show Table
-CREATE TABLE Show (
-    show_id INT PRIMARY KEY AUTO_INCREMENT,
+-- Show_Details Table
+CREATE TABLE Show_Details (
+    Show_Details_id INT PRIMARY KEY AUTO_INCREMENT,
     movie_id INT,
     screen_id INT,
-    show_date DATE,
-    show_time TIME,
+    Show_Details_date DATE,
+    Show_Details_time TIME,
     FOREIGN KEY (movie_id) REFERENCES Movie(movie_id),
     FOREIGN KEY (screen_id) REFERENCES Screen(screen_id)
 );
@@ -46,7 +46,7 @@ VALUES
 ('Tu Jhoothi Main Makkaar', 'Hindi', 'UA', '2D'),
 ('Avatar: The Way of Water', 'English', 'UA', '3D');
 
-INSERT INTO Show (movie_id, screen_id, show_date, show_time)
+INSERT INTO Show_Details (movie_id, screen_id, Show_Details_date, Show_Details_time)
 VALUES
 (1, 1, '2023-04-25', '12:10:00'),
 (2, 1, '2023-04-25', '01:00:00'),
